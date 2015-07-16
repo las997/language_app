@@ -1,7 +1,8 @@
 require 'bundler'
 Bundler.require
 
-require './models/model.rb'
+require_relative './models/models.rb'
+require_relative './models/noun_generator.rb'
 
 class MyApp < Sinatra::Base
 
@@ -13,25 +14,17 @@ class MyApp < Sinatra::Base
     erb :results
   end
   
-  get '/contact' do
-    @name = "Lauren"
-    erb :contact
+  get '/japanese.erb' do
+    erb :japanese
   end
   
-  get '/media' do
-    @media = ["photos","videos","music"]
-    erb :media 
+  get '/latin.erb' do
+    erb :latin
   end
-  
-  get '/about' do
-    @about = "Lauren"
-    erb :about
-  end
-  
-  get '/guitar' do
-    @guitar1 - Guitar.new("Stratocaster")
-    puts @guitar1.model
-    erb :guitar
+      
+  get '/noun1_results.erb' do
+    @noun = Noun_Generator.new
+    erb :noun1_results
   end
   
 end
