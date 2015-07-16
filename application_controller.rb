@@ -14,7 +14,16 @@ class MyApp < Sinatra::Base
   end
   
   get '/japanese.erb' do
-    erb :latin
+     group1_japanese_verbs = {
+    :to_go => "いきます",
+    :to_eat => "たべます",
+    :to_drink => "のみます",
+    :to_write => "かきます"
+    }
+    japanese = group1_japanese_verbs.values
+    @rand_verb = japanese[rand(japanese.length)]
+
+    erb :japanese
   end
   
   get '/noun_generator' do
