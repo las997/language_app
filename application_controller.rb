@@ -27,4 +27,8 @@ class MyApp < Sinatra::Base
     erb :noun1_results
   end
   
+  get '/jnoun_results.erb' do
+    erb :jnoun_results
+  end
+  
 end
