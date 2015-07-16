@@ -13,25 +13,12 @@ class MyApp < Sinatra::Base
     erb :results
   end
   
-  get '/contact' do
-    @name = "Lauren"
-    erb :contact
+  get '/japanese.erb' do
+    erb :latin
   end
   
-  get '/media' do
-    @media = ["photos","videos","music"]
-    erb :media 
-  end
-  
-  get '/about' do
-    @about = "Lauren"
-    erb :about
-  end
-  
-  get '/guitar' do
-    @guitar1 - Guitar.new("Stratocaster")
-    puts @guitar1.model
-    erb :guitar
+  get '/noun_generator' do
+    erb : noun_generator
   end
   
 end
