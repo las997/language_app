@@ -5,14 +5,13 @@
       <link rel="stylesheet" type="text/css" href="css/japanese_page.css">
   </head>
   <body>
-    <nav id="menu">
-      <ul>
+      <ul id="nav">
         <li><a href="http://las997-pc-15-precollege-se1-nyfl-070615-2-111132.nitrousapp.com:9393/">Home</a></li>  
         <li><a href="as997-pc-15-precollege-se1-nyfl-070615-2-111132.nitrousapp.com:9393/japanese.erb">Japanese</a></li>
+         <li><a href="http://las997-pc-15-precollege-se1-nyfl-070615-2-111132.nitrousapp.com:9393/latin.erb">Latin</a></li>
       </ul>
-    </nav>
     <h1>Japanese Verb Translation</h1>
-    <%=@rand_verb %>
+    <h3><%=@rand_verb %></h3>
     <form action="/results" method="post">
       English translation:<br>
         <input type="text" name="english">
