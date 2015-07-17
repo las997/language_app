@@ -1,1 +1,46 @@
-<% @noun %>
+<title>Ultimate Language App - Latin 1st Declension Nouns</title>
+<style>
+body {
+  background-image: url("http://www.crystalinks.com/TempleJupiterOptimusMaximus.jpg");
+  background-size: 1450px 800px;
+}
+      <h1>Ultimate Language App</h1>
+</style>
+<% puts @noun %>
+
+<form>
+  <font face="verdana">Enter the English translation of the Latin word: </font><br>
+<input type="text" name="word">
+</form>
+
+<form>
+  <font face="verdana">Select the case of the word: </font>
+<select id="myList" onchange="myFunction()">
+  <option></option>
+  <option>Nominative</option>
+  <option>Genitive</option>  
+  <option>Dative</option>
+  <option>Accusative</option>
+  <option>Ablative</option>
+</select>
+
+</form>
+
+<form action="action_page.erb">
+<!-- First name:<br>
+<input type="text" name="english">
+<br>
+Last name:<br>
+<input type="dropdown" name="declension">
+<br><br>
+<p>Check your answer.</p> -->
+
+<input type="submit" value="Submit">
+</form> 
+
+<script>
+function myFunction() {
+    var mylist = document.getElementById("myList");
+    document.getElementById("demo").value = mylist.options[mylist.selectedIndex].text;
+}
+</script>
