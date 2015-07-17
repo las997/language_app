@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <script type="text/javascript">
 var image1 = new Image()
 image1.src = "images/pentagg.jpg"
@@ -32,8 +31,7 @@ image2.src = "images/promo.jpg"
      Pretty cool eh? This slide is proof the content can be anything.
    </div>
 </div>
-    
-=======
+
     <title>Japanese Translation</title>
       <link rel="stylesheet" type="text/css" href="css/japanese_page.css">
   </head>

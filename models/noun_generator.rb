@@ -45,7 +45,6 @@ end
 						   :sailor => "naut",
 						   :queen => "regin" }
 
-<<<<<<< HEAD
     @first_declension_singular_endings = { "the" => "a",
 					"of the" => "ae",
 					 "for the" => "ae",
@@ -83,17 +82,15 @@ end
   def read_compare_ending(ending_input, rand_key)
     if ending_input == rand_key.to_s
   end
-  end
+ 
 end
 
-
-=======
     @first_declension_singular_endings = { :nominative => "a",
       :genative => "ae",
       :dative => "ae",
       :accusative => "am",
       :ablative => "ā" }
-  end
+  
 
 
   def rand_noun
@@ -125,5 +122,4 @@ end
     if ending_input == @rand_ending_key.to_s
   end
   end
-end
->>>>>>> e7875d3c1b88a3a240631735bf1ba9903d1b79fc
+
