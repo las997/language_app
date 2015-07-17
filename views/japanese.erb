@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Japanese Translation</title>
+      <link rel ="stylesheet" type="text/css" href="./style.css">
+  </head>
+  <body>
+    <h1>Japanese Word Translation</h1>
+    <%=@rand_verb %>
+    <form action="/results" method="post">
+      English translation:<br>
+        <input type="text" name="english">
+        <input type="hidden" name="japanese" value =  "<%=@rand_verb %>">
+       <br>
+      <input type="submit" value="Submit">
+    </form> 
+  </body>
+ </html>

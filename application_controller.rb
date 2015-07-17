@@ -13,9 +13,12 @@ class MyApp < Sinatra::Base
   get '/results' do
     erb :results
   end
+  
+  post '/results' do
+    puts params
+  end
 
   get '/japanese.erb' do
-<<<<<<< HEAD
      group1_japanese_verbs = {
     :to_go => "いきます",
     :to_eat => "たべます",
@@ -29,8 +32,7 @@ class MyApp < Sinatra::Base
   end
 
   get '/noun_generator' do
-    erb : noun_generator
-=======
+#     erb : noun_generator
     erb :japanese
   end
 
@@ -41,7 +43,6 @@ class MyApp < Sinatra::Base
   get '/noun1_results.erb' do
     @noun = Noun_Generator.new
     erb :noun1_results
->>>>>>> 4d8f4911a4a85b0e9d60dd1a95dd1adb64ad767a
   end
 
 end
