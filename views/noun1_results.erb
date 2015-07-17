@@ -3,7 +3,13 @@
 <head>
 </head>
 <body>
-<p> <% @noun %> <p>
+  <p> <%=@display%> <p>
+  <form action="latin_ans" method="post">
+    <input type="text" name="noun_translate">
+    <input type="hidden" name="noun_ans" value="<%=@rand_noun_key%>">
+    <input type="submit" value="Submit">
+    
+  </form>
 </body>
 </html>
 

@@ -73,7 +73,16 @@ class MyApp < Sinatra::Base
   end
 
   
-  get '/jnoun_results.erb' do
+  post '/latin_ans' do
+    if params["noun_translate"] == params["noun_ans"]
+      @result = "correct"
+    else
+      @result = "false"
+    end
+    erb :latin_results
+  end
+  
+  get '/jnoun_results' do
     erb :jnoun_results
   end
   
