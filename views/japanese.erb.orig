@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <script type="text/javascript">
 var image1 = new Image()
 image1.src = "images/pentagg.jpg"
@@ -32,19 +31,19 @@ image2.src = "images/promo.jpg"
      Pretty cool eh? This slide is proof the content can be anything.
    </div>
 </div>
-    
-=======
+
     <title>Japanese Translation</title>
       <link rel="stylesheet" type="text/css" href="css/japanese_page.css">
   </head>
   <body>
-      <ul id="nav">
+    <nav id="menu">
+      <ul>
         <li><a href="http://las997-pc-15-precollege-se1-nyfl-070615-2-111132.nitrousapp.com:9393/">Home</a></li>  
         <li><a href="as997-pc-15-precollege-se1-nyfl-070615-2-111132.nitrousapp.com:9393/japanese.erb">Japanese</a></li>
-         <li><a href="http://las997-pc-15-precollege-se1-nyfl-070615-2-111132.nitrousapp.com:9393/latin.erb">Latin</a></li>
       </ul>
+    </nav>
     <h1>Japanese Verb Translation</h1>
-    <h3><%=@rand_verb %></h3>
+    <%=@rand_verb %>
     <form action="/results" method="post">
       English translation:<br>
         <input type="text" name="english">
