@@ -1,51 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-
-    <script type="text/javascript">
-var image1 = new Image()
-image1.src = "images/pentagg.jpg"
-var image2 = new Image()
-image2.src = "images/promo.jpg"
-</script>
-    <title>Ultimate Language App - Japanese</title>
-    <style>
-/* body {
-  background-image: url("http://www.hkartclub.com/painting/painting261.jpg");
-  background-size: 1400px 730px;
-} */
-      <h1>Ultimate Language App</h1>
-</style>
-  </head>
-  <body>
-    <p><font face="verdana" size="10"><center>Choose a topic to study</center></font></p>
-    <p><center><font face="verdana" size="8"><a href="jnoun_results.erb">Nouns</a></font></center></p>
-    
-    <div id="slideshow">
-   <div>
-     <img src="http://www.hkartclub.com/painting/painting261.jpg">
-   </div>
-   <div>
-     <img src="http://sushionsecond.com/wp-content/uploads/2013/10/Sushi-Roll-on-a-white-background.jpg">
-   </div>
-   <div>
-     Pretty cool eh? This slide is proof the content can be anything.
-   </div>
-</div>
-    
-=======
     <title>Japanese Translation</title>
       <link rel="stylesheet" type="text/css" href="css/japanese_page.css">
   </head>
   <body>
-    <nav id="menu">
-      <ul>
+      <ul id="nav">
         <li><a href="http://las997-pc-15-precollege-se1-nyfl-070615-2-111132.nitrousapp.com:9393/">Home</a></li>  
         <li><a href="as997-pc-15-precollege-se1-nyfl-070615-2-111132.nitrousapp.com:9393/japanese.erb">Japanese</a></li>
+         <li><a href="http://las997-pc-15-precollege-se1-nyfl-070615-2-111132.nitrousapp.com:9393/latin.erb">Latin</a></li>
       </ul>
-    </nav>
     <h1>Japanese Verb Translation</h1>
-    <%=@rand_verb %>
+    <h3><%=@rand_verb %></h3>
     <form action="/results" method="post">
       English translation:<br>
         <input type="text" name="english">

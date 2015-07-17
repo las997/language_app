@@ -6,15 +6,14 @@ require_relative './models/noun_generator.rb'
 
 class MyApp < Sinatra::Base
 
-
   get '/' do
     erb :index
   end
 
-  get '/results.erb' do
+  get '/results' do
     erb :results
   end
-
+  
   post '/results' do
     group1_japanese_verbs = {
     :to_go => "いきます",
@@ -22,7 +21,7 @@ class MyApp < Sinatra::Base
     :to_drink => "のみます",
     :to_write => "かきます"
     }
-
+    
     question = params["japanese"]
     user_input = params["english"]
     answer = ""
@@ -33,7 +32,7 @@ class MyApp < Sinatra::Base
     end
     if answer == user_input
       @answer = "You are correct"
-    else
+    else 
       @answer = "You are wrong. Try again."
     end
   end
@@ -47,12 +46,11 @@ class MyApp < Sinatra::Base
     }
     japanese = group1_japanese_verbs.values
     @rand_verb = japanese[rand(japanese.length)]
-
-
+    
+    
 
     erb :japanese
   end
-
 
   get '/noun_generator' do
 #     erb : noun_generator
@@ -74,15 +72,7 @@ class MyApp < Sinatra::Base
     erb :noun1_results
   end
 
-  post '/noun1answer.erb' do
-     noun_input = #params[:text]
-     ending_input = #params[:dropdown]
-     noungenerator.read_compare_noun(noun_input, rand_noun_key)
-  end
-
-  get '/jnoun_results.erb' do
-  end
-
+  
   post '/latin_ans' do
     if params["noun_translate"] == params["noun_ans"]
       @result = "correct"
@@ -91,15 +81,9 @@ class MyApp < Sinatra::Base
     end
     erb :latin_results
   end
-
+  
   get '/jnoun_results' do
     erb :jnoun_results
   end
-
-
-  get '/action_page.erb' do
-    erb :action_page
-  end
-
-
+  
 end
