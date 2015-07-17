@@ -63,6 +63,12 @@ class MyApp < Sinatra::Base
 
   get '/noun1_results.erb' do
     @noun = Noun_Generator.new
+    noungenerator = Noun_Generator.new
+    rand_noun_key = noungenerator.rand_noun
+    rand_ending_key = noungenerator.rand_ending
+    @display = noungenerator.return_noun(rand_noun_key).to_s + noungenerator.return_ending(rand_ending_key).to_s
+    @rand_noun_key = rand_noun_key
+    @rand_ending_key = rand_ending_key
     erb :noun1_results
   end
 
