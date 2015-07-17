@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+<<<<<<< HEAD
     <script type="text/javascript">
 var image1 = new Image()
 image1.src = "images/pentagg.jpg"
@@ -32,5 +33,26 @@ image2.src = "images/promo.jpg"
    </div>
 </div>
     
+=======
+    <title>Japanese Translation</title>
+      <link rel="stylesheet" type="text/css" href="css/japanese_page.css">
+  </head>
+  <body>
+    <nav id="menu">
+      <ul>
+        <li><a href="http://las997-pc-15-precollege-se1-nyfl-070615-2-111132.nitrousapp.com:9393/">Home</a></li>  
+        <li><a href="as997-pc-15-precollege-se1-nyfl-070615-2-111132.nitrousapp.com:9393/japanese.erb">Japanese</a></li>
+      </ul>
+    </nav>
+    <h1>Japanese Verb Translation</h1>
+    <%=@rand_verb %>
+    <form action="/results" method="post">
+      English translation:<br>
+        <input type="text" name="english">
+        <input type="hidden" name="japanese" value =  "<%=@rand_verb %>">
+       <br>
+      <input type="submit" value="Submit">
+    </form> 
+>>>>>>> b605c1c4bfc3e20ceed9b377b36ac9688616c7c4
   </body>
-</html>
+ </html>

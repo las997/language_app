@@ -15,10 +15,52 @@ class MyApp < Sinatra::Base
     erb :results
   end
 
+  post '/results' do
+    group1_japanese_verbs = {
+    :to_go => "いきます",
+    :to_eat => "たべます",
+    :to_drink => "のみます",
+    :to_write => "かきます"
+    }
+
+    question = params["japanese"]
+    user_input = params["english"]
+    answer = ""
+    group1_japanese_verbs.each do |key, value|
+      if question == value
+        answer = key.to_s.gsub("_", " ")
+      end
+    end
+    if answer == user_input
+      @answer = "You are correct"
+    else
+      @answer = "You are wrong. Try again."
+    end
+  end
+
   get '/japanese.erb' do
+     group1_japanese_verbs = {
+    :to_go => "いきます",
+    :to_eat => "たべます",
+    :to_drink => "のみます",
+    :to_write => "かきます"
+    }
+    japanese = group1_japanese_verbs.values
+    @rand_verb = japanese[rand(japanese.length)]
+
+
+
     erb :japanese
   end
 
+<<<<<<< HEAD
+=======
+  get '/noun_generator' do
+#     erb : noun_generator
+    erb :japanese
+  end
+
+>>>>>>> b605c1c4bfc3e20ceed9b377b36ac9688616c7c4
   get '/latin.erb' do
     erb :latin
   end
@@ -34,6 +76,7 @@ class MyApp < Sinatra::Base
     erb :noun1_results
   end
 
+<<<<<<< HEAD
   post '/noun1answer.erb' do
      noun_input = #params[:text]
      ending_input = #params[:dropdown]
@@ -43,6 +86,9 @@ class MyApp < Sinatra::Base
   get '/jnoun_results.erb' do
   end
 
+=======
+
+>>>>>>> b605c1c4bfc3e20ceed9b377b36ac9688616c7c4
   post '/latin_ans' do
     if params["noun_translate"] == params["noun_ans"]
       @result = "correct"
@@ -55,9 +101,13 @@ class MyApp < Sinatra::Base
   get '/jnoun_results' do
     erb :jnoun_results
   end
+<<<<<<< HEAD
 
   get '/action_page.erb' do
     erb :action_page
   end
 
+=======
+
+>>>>>>> b605c1c4bfc3e20ceed9b377b36ac9688616c7c4
 end
