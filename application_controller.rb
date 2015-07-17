@@ -15,7 +15,26 @@ class MyApp < Sinatra::Base
   end
   
   post '/results' do
-    puts params
+    group1_japanese_verbs = {
+    :to_go => "いきます",
+    :to_eat => "たべます",
+    :to_drink => "のみます",
+    :to_write => "かきます"
+    }
+    
+    question = params["japanese"]
+    user_input = params["english"]
+    answer = ""
+    group1_japanese_verbs.each do |key, value|
+      if question == value
+        answer = key.to_s.gsub("_", " ")
+      end
+    end
+    if answer == user_input
+      @answer = "You are correct"
+    else 
+      @answer = "You are wrong. Try again."
+    end
   end
 
   get '/japanese.erb' do
@@ -27,6 +46,8 @@ class MyApp < Sinatra::Base
     }
     japanese = group1_japanese_verbs.values
     @rand_verb = japanese[rand(japanese.length)]
+    
+    
 
     erb :japanese
   end
@@ -45,4 +66,9 @@ class MyApp < Sinatra::Base
     erb :noun1_results
   end
 
+  
+  get '/jnoun_results.erb' do
+    erb :jnoun_results
+  end
+  
 end

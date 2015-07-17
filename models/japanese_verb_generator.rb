@@ -20,6 +20,7 @@ end
 
 japanese_word = JapaneseVerbs.new
 japanese_word.correct_translation?("to write", "かきます")
+
   
  
 
